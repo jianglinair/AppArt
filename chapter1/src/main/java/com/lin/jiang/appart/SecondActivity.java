@@ -1,4 +1,4 @@
-package com.lin.jiang.appart.chapter1;
+package com.lin.jiang.appart;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,9 +6,9 @@ import android.util.Log;
 
 import com.lin.jiang.appart.R;
 
-public class Chapter1SecondActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
-    private static final String TAG = "TEST:Chapter1SecondActivity";
+    private static final String TAG = "TEST:SecondActivity";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
