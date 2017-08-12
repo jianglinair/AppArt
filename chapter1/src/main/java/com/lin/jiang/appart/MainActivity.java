@@ -2,6 +2,7 @@ package com.lin.jiang.appart;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("time", System.currentTimeMillis());
                 startActivity(intent);
             }
         });
@@ -81,5 +83,11 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         String test = savedInstanceState.getString("extra_test");
         Log.d(TAG, "onRestoreInstanceState: restore extra_test: " + test);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG, "onNewIntent: time=" + intent.getLongExtra("time", 0));
     }
 }
