@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: ");
         setContentView(R.layout.activity_main);
 
         TextView tv = (TextView) findViewById(R.id.text_view);
@@ -25,5 +24,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        UserManager.sUserId = 2;
+        Log.d(TAG, "onCreate: sUserId = " + UserManager.sUserId);
     }
 }

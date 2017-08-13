@@ -14,7 +14,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: ");
+
         setContentView(R.layout.activity_second);
 
         TextView tv = (TextView) findViewById(R.id.text_view);
@@ -25,5 +25,6 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Log.d(TAG, "onCreate: sUserId = " + UserManager.sUserId);
     }
 }
