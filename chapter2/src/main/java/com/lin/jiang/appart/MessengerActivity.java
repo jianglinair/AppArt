@@ -5,12 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.provider.SyncStateContract;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.lin.jiang.appart.service.MessengerService;
 import com.lin.jiang.appart.utils.Constants;
@@ -22,17 +23,19 @@ public class MessengerActivity extends AppCompatActivity {
     /**
      * the messenger sends msg to server
      */
-    private Messenger mService;
+    private Messenger mSendMessenger;
     private ServiceConnection mConn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            mService = new Messenger(iBinder);
+            mSendMessenger = new Messenger(iBinder);
             Message msg = Message.obtain(null, Constants.MSG_FROM_CLIENT);
             Bundle data = new Bundle();
             data.putString("msg", "hello, this is client.");
             msg.setData(data);
+            // 接收服务端回复的 messenger
+            msg.replyTo = mReceiveMessenger;
             try {
-                mService.send(msg);
+                mSendMessenger.send(msg);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -57,5 +60,21 @@ public class MessengerActivity extends AppCompatActivity {
     protected void onDestroy() {
         unbindService(mConn);
         super.onDestroy();
+    }
+
+    private Messenger mReceiveMessenger = new Messenger(new MessengerHandler());
+
+    private static class MessengerHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case Constants.MSG_FROM_SERVICE:
+                    Log.d(TAG, "handleMessage: receive msg from service: " + msg.getData().getString("reply"));
+                    break;
+                default:
+                    super.handleMessage(msg);
+                    break;
+            }
+        }
     }
 }
