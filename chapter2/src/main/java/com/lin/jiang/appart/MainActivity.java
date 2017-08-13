@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, MessengerActivity.class);
                 startActivity(intent);
             }
         });
 
-        UserManager.sUserId = 2;
-        Log.d(TAG, "onCreate: sUserId = " + UserManager.sUserId);
+//        UserManager.sUserId = 2;
+//        Log.d(TAG, "onCreate: sUserId = " + UserManager.sUserId);
     }
 }

@@ -27,6 +27,14 @@
             android:name=".ThirdActivity"
             android:configChanges="screenLayout"
             android:process="com.lin.jiang.appart.remote" />
+
+        <service
+            android:name=".service.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".MessengerActivity"></activity>
     </application>
 
 </manifest>
