@@ -1,4 +1,4 @@
-package com.lin.jiang.appart;
+package com.lin.jiang.appart.utils;
 
 import java.io.Serializable;
 

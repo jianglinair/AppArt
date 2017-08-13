@@ -1,4 +1,4 @@
-package com.lin.jiang.appart;
+package com.lin.jiang.appart.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.lin.jiang.appart.R;
+import com.lin.jiang.appart.utils.UserManager;
 
 public class SecondActivity extends AppCompatActivity {
 

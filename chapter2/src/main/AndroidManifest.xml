@@ -20,11 +20,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".activity.SecondActivity"
             android:configChanges="screenLayout"
             android:process=":remote" />
         <activity
-            android:name=".ThirdActivity"
+            android:name=".activity.ThirdActivity"
             android:configChanges="screenLayout"
             android:process="com.lin.jiang.appart.remote" />
 
@@ -34,7 +34,15 @@
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".MessengerActivity"></activity>
+        <activity android:name=".activity.MessengerActivity" />
+
+        <service
+            android:name=".aidl.BookManagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".activity.BookManagerActivity"></activity>
     </application>
 
 </manifest>

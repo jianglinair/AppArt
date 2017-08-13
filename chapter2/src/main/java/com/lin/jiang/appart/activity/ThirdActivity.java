@@ -1,7 +1,9 @@
-package com.lin.jiang.appart;
+package com.lin.jiang.appart.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.lin.jiang.appart.R;
 
 public class ThirdActivity extends AppCompatActivity {
 

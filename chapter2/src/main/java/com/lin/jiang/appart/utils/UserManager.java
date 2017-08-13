@@ -1,4 +1,4 @@
-package com.lin.jiang.appart;
+package com.lin.jiang.appart.utils;
 
 /**
  * Created by jianglin on 17-8-13.

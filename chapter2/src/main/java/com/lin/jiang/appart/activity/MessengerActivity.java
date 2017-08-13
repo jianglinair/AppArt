@@ -1,4 +1,4 @@
-package com.lin.jiang.appart;
+package com.lin.jiang.appart.activity;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,6 +13,7 @@ import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.lin.jiang.appart.R;
 import com.lin.jiang.appart.service.MessengerService;
 import com.lin.jiang.appart.utils.Constants;
 
