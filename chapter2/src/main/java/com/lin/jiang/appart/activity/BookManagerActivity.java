@@ -22,7 +22,7 @@ import java.util.List;
 
 public class BookManagerActivity extends AppCompatActivity {
 
-    private static final String TAG = "TEST:BookManagerActivity";
+    private static final String TAG = "BookManagerActivity";
     private static final int MESSAGE_NEW_BOOK_ARRIVED = 1;
 
     private IBookManager mRemoteBookManager;

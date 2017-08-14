@@ -1,4 +1,4 @@
-package com.lin.jiang.appart;
+package com.lin.jiang.appart.aidl;
 
 import android.os.Parcel;
 import android.os.RemoteException;

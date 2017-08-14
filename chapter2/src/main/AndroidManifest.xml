@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lin.jiang.appart">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,7 +45,15 @@
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".activity.BookManagerActivity"></activity>
+        <activity android:name=".activity.BookManagerActivity" />
+
+        <service
+            android:name=".service.TCPServerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <activity android:name=".activity.TcpClientActivity"></activity>
     </application>
 
 </manifest>

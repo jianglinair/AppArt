@@ -1,17 +1,16 @@
 package com.lin.jiang.appart;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.lin.jiang.appart.activity.BookManagerActivity;
-import com.lin.jiang.appart.activity.MessengerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "TEST:MainActivity";
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

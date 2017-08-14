@@ -19,7 +19,7 @@ import com.lin.jiang.appart.utils.Constants;
 
 public class MessengerActivity extends AppCompatActivity {
 
-    private static final String TAG = "TEST:MessengerActivity";
+    private static final String TAG = "MessengerActivity";
 
     /**
      * the messenger sends msg to server

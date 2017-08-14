@@ -12,7 +12,7 @@ import com.lin.jiang.appart.utils.UserManager;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private static final String TAG = "TEST:SecondActivity";
+    private static final String TAG = "SecondActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

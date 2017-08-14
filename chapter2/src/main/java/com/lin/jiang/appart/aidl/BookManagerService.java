@@ -17,7 +17,7 @@ import static android.os.Build.VERSION_CODES.N;
 
 public class BookManagerService extends Service {
 
-    private static final String TAG = "TEST:BookManagerService";
+    private static final String TAG = "BookManagerService";
 
     private CopyOnWriteArrayList<Book> mBookList = new CopyOnWriteArrayList<>();
     private RemoteCallbackList<IOnNewBookArrivedListener> mListenerList = new RemoteCallbackList<>();

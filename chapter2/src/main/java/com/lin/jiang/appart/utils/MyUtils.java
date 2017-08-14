@@ -1,12 +1,12 @@
 package com.lin.jiang.appart.utils;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.util.List;
-
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
 import android.content.Context;
+
+import java.io.Closeable;
+import java.io.IOException;
+import java.util.List;
 
 public class MyUtils {
 

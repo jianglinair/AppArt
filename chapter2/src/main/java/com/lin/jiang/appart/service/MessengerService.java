@@ -14,7 +14,7 @@ import com.lin.jiang.appart.utils.Constants;
 
 public class MessengerService extends Service {
 
-    private static final String TAG = "TEST:MessengerService";
+    private static final String TAG = "MessengerService";
     private final Messenger mMessenger = new Messenger(new MessengerHandler());
 
     @Override
