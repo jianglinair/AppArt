@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.lin.jiang.appart.ui.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lin.jiang.appart.MainActivity">
+    android:orientation="vertical"
+    android:padding="12dp">
+    
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button"
+        android:onClick="onButtonClick"
+        android:text="滑动冲突场景1-外部拦截"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button"
+        android:onClick="onButtonClick"
+        android:text="滑动冲突场景1-内部拦截"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.lin.jiang.appart.ui.RevealLayout>
