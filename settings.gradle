@@ -1,1 +1,1 @@
-include ':chapter1', ':chapter2'
+include ':chapter1', ':chapter2', ':chapter3'
