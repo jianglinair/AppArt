@@ -1,11 +1,11 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
 
     defaultConfig {
-//        applicationId "com.lin.jiang.appart"
+        applicationId "com.lin.jiang.appart"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
