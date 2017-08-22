@@ -9,8 +9,10 @@
 
     <com.lin.jiang.appart.ui.CircleView
         android:id="@+id/circle_view"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:padding="20dp"
         android:background="#000000" />
 
 </LinearLayout>
