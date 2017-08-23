@@ -1,12 +1,15 @@
 package com.lin.jiang.appart.ui;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.lin.jiang.appart.R;
 
 /**
  * Created by jianglin on 17-8-22.
@@ -27,13 +30,27 @@ public class CircleView extends View {
         init();
     }
 
+    /**
+     * @param context
+     * @param attrs   自定义属性
+     */
     public CircleView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
+//        super(context, attrs);
+        this(context, attrs, 0);
         init();
     }
 
+    /**
+     * @param context
+     * @param attrs        自定义属性
+     * @param defStyleAttr
+     */
     public CircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CircleView);
+        mColor = array.getColor(R.styleable.CircleView_circle_color, Color.RED);
+        array.recycle();
         init();
     }
 
