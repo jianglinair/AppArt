@@ -101,4 +101,5 @@ public class CircleView extends View {
         int radius = Math.min(width, height) / 2;
         canvas.drawCircle(paddingLeft + width / 2, paddingTop + height / 2, radius, mPaint);
     }
+
 }
