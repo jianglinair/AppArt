@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+/**
+ * 小米手机除了需要在 manifest 中添加权限外，还需要在手机设置中手动给予 APP 权限
+ */
 public class TestActivity extends AppCompatActivity implements View.OnTouchListener {
 
     private static final String TAG = "TestActivity";
