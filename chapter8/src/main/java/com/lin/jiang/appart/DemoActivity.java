@@ -17,6 +17,7 @@ public class DemoActivity extends AppCompatActivity {
 
     private void initView() {
 //        Dialog dialog = new Dialog(this.getApplicationContext());
+        Thread t = new Thread();
         Dialog dialog = new Dialog(this);
         TextView textView = new TextView(this);
         textView.setText("this is toast!");
